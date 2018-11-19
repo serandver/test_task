@@ -25,22 +25,6 @@ public class LazyTimeExpiringCollectionTest {
         int actualSize = lazyTimeExpiringCollection.size();
 
         assertEquals(expectedSize, actualSize);
-
-        Object object2 = new Object();
-        lazyTimeExpiringCollection.add(object2);
-        assertTrue(lazyTimeExpiringCollection.contains(object2));
-        int expectedSize2 = 2;
-        int actualSize2 = lazyTimeExpiringCollection.size();
-
-        assertEquals(expectedSize2, actualSize2);
-
-        Object object3 = new Object();
-        lazyTimeExpiringCollection.add(object3);
-        assertTrue(lazyTimeExpiringCollection.contains(object3));
-        int expectedSize3 = 3;
-        int actualSize3 = lazyTimeExpiringCollection.size();
-
-        assertEquals(expectedSize3, actualSize3);
     }
 
     @Test
