@@ -33,15 +33,9 @@ public class LazyTimeExpiringCollectionTest {
         Object object1 = new Object();
         Object object2 = new Object();
         Object object3 = new Object();
-        try {
-            lazyTimeExpiringCollection.add(object1);
-            Thread.sleep(2000);
-            lazyTimeExpiringCollection.add(object2);
-            Thread.sleep(2000);
-            lazyTimeExpiringCollection.add(object3);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        lazyTimeExpiringCollection.add(object1);
+        lazyTimeExpiringCollection.add(object2);
+        lazyTimeExpiringCollection.add(object3);
         int expectedSize = 3;
         int actualSize = lazyTimeExpiringCollection.size();
 
